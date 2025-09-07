@@ -163,15 +163,14 @@
         }, 0.1);
 
     let open = false;
+
     function toggleMenu() {
       open = !open;
       menuBtn.setAttribute('aria-expanded', String(open));
       if (open) {
-        siteNav.classList.add('rounded-b-2xl');
         masterTL.play();
       } else {
         masterTL.reverse().then(() => {
-          siteNav.classList.remove('rounded-b-2xl');
         });
       }
     }
