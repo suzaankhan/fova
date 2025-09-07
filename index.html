@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Glass Navbar • GSAP + Tailwind</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="bg-[#0b090a]">
+
+  <nav id="site-nav"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass md:bg-transparent md:backdrop-filter-none">
+    <div id="nav-wrapper" class="mx-auto glass max-w-[1500px] md:backdrop-blur-lg cstm-dark">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+
+          <a href="#home">
+            <img src="./assets/fova_2.png" alt="FOVA" class="h-8 sm:h-8 md:h-9 w-auto" />
+          </a>
+
+          <ul class="hidden md:flex justify-center gap-10 flex-1">
+            <li class="group">
+              <a href="#home" class="gold-text transition-colors font-semibold relative py-2">
+                <span>Home</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#about" class="gold-text transition-colors font-semibold relative py-2">
+                <span>About Us</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#portfolio" class="gold-text transition-colors font-semibold relative py-2">
+                <span>Portfolio</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#services" class="gold-text transition-colors font-semibold relative py-2">
+                <span>Services</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#clients" class="gold-text transition-colors font-semibold relative py-2">
+                <span>Clients</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+          </ul>
+
+
+          <div class="flex items-center gap-3">
+            <a href="#contact"
+              class="hidden md:inline-flex contact-btn gsap-contact-btn gold-text border-blue-500 items-center rounded-3xl hover:text-blue-600 transition-colors relative">
+              <div class="cstm-dark py-2 px-2 rounded-3xl">
+                Let’s Connect
+              </div>
+            </a>
+
+            <button id="menu-btn"
+              class="md:hidden group relative h-9 w-9 grid place-items-center rounded-xl transition-colors"
+              aria-label="Toggle menu" aria-expanded="false">
+              <div class="relative h-4 w-6">
+                <span class="absolute left-0 top-0 block h-0.5 w-6 bg-[#ebd496] rounded transition-none"></span>
+                <span
+                  class="absolute right-0 top-1/2 -translate-y-1/2 block h-0.5 w-4 bg-[#ebd496] rounded transition-none"></span>
+                <span class="absolute left-0 bottom-0 block h-0.5 w-6 bg-[#ebd496] rounded transition-none"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="mobile-menu" class="md:hidden glass cstm-dark">
+      <div class="px-4 pt-2 pb-4 space-y-2">
+        <a href="#home" class="gold-text mobile-link block px-3 py-2 rounded-lg font-semibold">Home</a>
+        <a href="#about" class="gold-text mobile-link block px-3 py-2 rounded-lg font-semibold">About Us</a>
+        <a href="#portfolio" class="gold-text mobile-link block px-3 py-2 rounded-lg font-semibold">Portfolio</a>
+        <a href="#services" class="gold-text mobile-link block px-3 py-2 rounded-lg font-semibold">Services</a>
+        <a href="#clients" class="gold-text mobile-link block px-3 pt-2 pb-6 rounded-lg font-semibold">Clients</a>
+        <a href="#contact"
+          class="mobile-link mt-2 gold-text contact-btn text-center rounded-xl relative overflow-hidden">
+          <div class="contact-btn cstm-dark border-blue-500 py-2 rounded-3xl">
+            Let’s Connect
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section id="home" class="hero-section relative w-full h-screen text-white">
+      <div class="hero-content text-center">
+        <h1 class="hero-title text-6xl md:text-8xl font-bold uppercase tracking-wider overflow-hidden">
+          <span>F</span><span>O</span><span>V</span><span>A</span>
+        </h1>
+        <div class="mask-container mt-4">
+          <p class="hero-tagline text-lg md:text-xl font-light">Crafting Cinematic Stories for Brands.</p>
+        </div>
+      </div>
+    </section>
+
+    <div id="content-wrapper" class="relative z-10 bg-[#0b090a]">
+      <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h1 class="text-4xl gold-text font-semibold mb-4">About Us</h1>
+        <p class="text-gray-400 mb-8">This is where your content will go.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="h-40 rounded-2xl bg-gradient-to-br from-pink-200 to-pink-400"></div>
+          <div class="h-40 rounded-2xl bg-gradient-to-br from-indigo-200 to-indigo-400"></div>
+          <div class="h-40 rounded-2xl bg-gradient-to-br from-green-200 to-green-400"></div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="h-96 bg-gray-900"></section>
+      <section id="services" class="h-96"></section>
+      <section id="clients" class="h-96 bg-gray-900"></section>
+      <section id="contact" class="h-[1200px] bg-gray-800"></section>
+    </div>
+  </main>
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const burgerLines = menuBtn.querySelectorAll('span');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const siteNav = document.getElementById('site-nav');
+
+    gsap.set(mobileMenu, { height: 0, opacity: 0, pointerEvents: "none" });
+    const masterTL = gsap.timeline({ paused: true, defaults: { ease: "power3.inOut" } });
+
+    masterTL
+      .to(burgerLines[0], { y: 7, rotate: 45, duration: 0.20 }, 0)
+      .to(burgerLines[1], { opacity: 0, duration: 0.15 }, 0)
+      .to(burgerLines[2], { y: -7, rotate: -45, duration: 0.20 }, 0)
+      .to(mobileMenu, { height: "auto", opacity: 1, pointerEvents: "auto", duration: 0.3 }, 0)
+      .fromTo(".mobile-link",
+        { y: -20, opacity: 0, scale: 0.9 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.2,
+          stagger: 0.06,
+          ease: "back.out(1.7)",
+        }, 0.1);
+
+    let open = false;
+    function toggleMenu() {
+      open = !open;
+      menuBtn.setAttribute('aria-expanded', String(open));
+      if (open) {
+        siteNav.classList.add('rounded-b-2xl');
+        masterTL.play();
+      } else {
+        masterTL.reverse().then(() => {
+          siteNav.classList.remove('rounded-b-2xl');
+        });
+      }
+    }
+
+    const contactBtn = document.querySelector('.gsap-contact-btn');
+    if (contactBtn) {
+      contactBtn.addEventListener('mouseenter', () => {
+        gsap.to(contactBtn, { scale: 1.05, duration: 0.3, ease: 'power2.out' });
+      });
+      contactBtn.addEventListener('mouseleave', () => {
+        gsap.to(contactBtn, { scale: 1, duration: 0.3, ease: 'power2.in' });
+      });
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', () => {
+      if (open) toggleMenu();
+    }));
+
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const introTL = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1 } });
+
+      gsap.fromTo(siteNav, { yPercent: -100 }, { yPercent: 0, duration: 0.2, ease: "power2.out" })
+
+      // THIS IS THE KEY CHANGE: from() becomes to()
+      introTL
+        .to('#site-nav', { y: 0 }) // Animate TO y:0 (final position) from the CSS state
+        .from('.hero-title span', {
+          y: 100,
+          opacity: 0,
+          stagger: 0.1,
+          duration: 0.5,
+          ease: 'power2.inOut'
+        }, "-=0.5")
+        .from('.hero-tagline', {
+          yPercent: 100,
+          opacity: 0,
+          duration: 0.8
+        }, "-=0.6");
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: '#home',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1,
+          pin: true,
+          pinSpacing: false,
+        }
+      })
+        .to('.hero-content', {
+          scale: 0.5,
+          opacity: 0,
+          ease: 'power2.inOut'
+        });
+    });
+  </script>
+
+  <!-- <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const burgerLines = menuBtn.querySelectorAll('span');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const siteNav = document.getElementById('site-nav');
+
+    gsap.set(mobileMenu, { height: 0, opacity: 0, pointerEvents: "none" });
+    const masterTL = gsap.timeline({ paused: true, defaults: { ease: "power3.inOut" } });
+
+    masterTL
+      .to(burgerLines[0], { y: 7, rotate: 45, duration: 0.20 }, 0)
+      .to(burgerLines[1], { opacity: 0, duration: 0.15 }, 0)
+      .to(burgerLines[2], { y: -7, rotate: -45, duration: 0.20 }, 0)
+      .to(mobileMenu, { height: "auto", opacity: 1, pointerEvents: "auto", duration: 0.3 }, 0)
+      .fromTo(".mobile-link",
+        { y: -20, opacity: 0, scale: 0.9 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.2,
+          stagger: 0.06,
+          ease: "back.out(1.7)",
+        }, 0.1);
+
+    let open = false;
+    function toggleMenu() {
+      open = !open;
+      menuBtn.setAttribute('aria-expanded', String(open));
+      if (open) {
+        siteNav.classList.add('rounded-b-2xl');
+        masterTL.play();
+      } else {
+        masterTL.reverse().then(() => {
+          siteNav.classList.remove('rounded-b-2xl');
+        });
+      }
+    }
+
+    const contactBtn = document.querySelector('.gsap-contact-btn');
+    if (contactBtn) {
+      contactBtn.addEventListener('mouseenter', () => {
+        gsap.to(contactBtn, { scale: 1.05, duration: 0.3, ease: 'power2.out' });
+      });
+      contactBtn.addEventListener('mouseleave', () => {
+        gsap.to(contactBtn, { scale: 1, duration: 0.3, ease: 'power2.in' });
+      });
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', () => {
+      if (open) toggleMenu();
+    }));
+
+    document.addEventListener('DOMContentLoaded', () => {
+      gsap.registerPlugin(ScrollTrigger);
+
+      const introTL = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1 } });
+
+      introTL
+        .from('#site-nav', { yPercent: -100 })
+        .from('.hero-title span', {
+            y: 100,
+            opacity: 0,
+            stagger: 0.1,
+            duration: 0.5,
+            ease: 'back.out(1.7)'
+        }, "-=0.5")
+        .from('.hero-tagline', {
+            yPercent: 100,
+            opacity: 0,
+            duration: 0.8
+        }, "-=0.6");
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: '#home',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 1,
+          pin: true,
+          pinSpacing: false,
+        }
+      })
+      .to('.hero-content', {
+        scale: 0.5,
+        opacity: 0,
+        ease: 'power2.inOut'
+      });
+    });
+  </script> -->
+</body>
+
+<!-- <body class="text-gray-900">
+
+  <nav id="site-nav"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass md:bg-transparent md:backdrop-filter-none">
+    <div id="nav-wrapper" class="mx-auto max-w-[1500px] md:backdrop-blur-lg cstm-dark">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div class="flex items-center justify-between h-16">
+
+          <a href="#home"> <img src="./assets/fova_2.png" alt="FOVA" class="h-8 sm:h-8 md:h-9 w-auto" />
+          </a>
+
+          <ul class="hidden md:flex justify-center gap-10 flex-1">
+            <li class="group">
+              <a href="#home" class="gold-text transition-colors font-semibold relative py-2">
+                <span>Home</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#about" class="gold-text transition-colors font-semibold relative py-2">
+                <span>About Us</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#portfolio" class="gold-text transition-colors font-semibold relative py-2">
+                <span>Portfolio</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#services" class="gold-text transition-colors font-semibold relative py-2">
+                <span>Services</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#clients" class="gold-text transition-colors font-semibold relative py-2">
+                <span>Clients</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+          </ul>
+
+
+          <div class="flex items-center gap-3">
+            <a href="#contact"
+              class="hidden md:inline-flex contact-btn gsap-contact-btn gold-text border-blue-500 items-center rounded-3xl hover:text-blue-600 transition-colors relative">
+              <div class="cstm-dark py-2 px-2 rounded-3xl">
+                Let’s Connect
+              </div>
+            </a>
+
+            <button id="menu-btn"
+              class="md:hidden group relative h-9 w-9 grid place-items-center rounded-xl transition-colors"
+              aria-label="Toggle menu" aria-expanded="false">
+              <div class="relative h-4 w-6">
+                <span class="absolute left-0 top-0 block h-0.5 w-6 bg-[#ebd496] rounded transition-none"></span>
+                <span
+                  class="absolute right-0 top-1/2 -translate-y-1/2 block h-0.5 w-4 bg-[#ebd496] rounded transition-none"></span>
+                <span class="absolute left-0 bottom-0 block h-0.5 w-6 bg-[#ebd496] rounded transition-none"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="mobile-menu" class="md:hidden cstm-dark">
+      <div class="px-4 pt-2 pb-4 space-y-2">
+        <a href="#home" class="gold-text mobile-link block px-3 py-2 rounded-lg font-semibold">Home</a>
+        <a href="#about" class="gold-text mobile-link block px-3 py-2 rounded-lg font-semibold">About Us</a>
+        <a href="#portfolio" class="gold-text mobile-link block px-3 py-2 rounded-lg font-semibold">Portfolio</a>
+        <a href="#services" class="gold-text mobile-link block px-3 py-2 rounded-lg font-semibold">Services</a>
+        <a href="#clients" class="gold-text mobile-link block px-3 pt-2 pb-6 rounded-lg font-semibold">Clients</a>
+        <a href="#contact" class="mobile-link mt-2 gold-text contact-btn text-center rounded-xl relative overflow-hidden">
+          <div class="contact-btn cstm-dark border-blue-500 py-2 rounded-3xl">
+            Let’s Connect
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <section id="home" class="hero-section relative w-full h-screen text-white">
+    <div class="hero-content text-center">
+        <h1 class="hero-title text-6xl md:text-8xl font-bold uppercase tracking-wider overflow-hidden">
+            <span>F</span><span>O</span><span>V</span><span>A</span>
+        </h1>
+        <div class="mask-container mt-4">
+            <p class="hero-tagline text-lg md:text-xl font-light">Crafting Cinematic Stories for Brands.</p>
+        </div>
+    </div>
+  </section>
+
+
+  <div id="content-wrapper" class="relative z-10 bg-[#0b090a]"> 
+    <main class="pt-20">
+      <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <h1 class="text-4xl gold-text font-semibold mb-4">About Us</h1>
+        <p class="text-gray-400 mb-8">This is where your content will go.</p>
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="h-40 rounded-2xl bg-gradient-to-br from-pink-200 to-pink-400"></div>
+          <div class="h-40 rounded-2xl bg-gradient-to-br from-indigo-200 to-indigo-400"></div>
+          <div class="h-40 rounded-2xl bg-gradient-to-br from-green-200 to-green-400"></div>
+        </div>
+      </section>
+
+      <section id="portfolio" class="h-96 bg-gray-900"></section>
+      <section id="services" class="h-96"></section>
+      <section id="clients" class="h-96 bg-gray-900"></section>
+      <section id="contact" class="h-[1200px] bg-gray-800"></section>
+    </main>
+  </div>
+
+
+  <script>
+    // --- Existing menu logic (unchanged) ---
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const burgerLines = menuBtn.querySelectorAll('span');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const siteNav = document.getElementById('site-nav');
+
+    gsap.set(mobileMenu, { height: 0, opacity: 0, pointerEvents: "none" });
+    const masterTL = gsap.timeline({ paused: true, defaults: { ease: "power3.inOut" } });
+
+    masterTL
+      .to(burgerLines[0], { y: 7, rotate: 45, duration: 0.20 }, 0)
+      .to(burgerLines[1], { opacity: 0, duration: 0.15 }, 0)
+      .to(burgerLines[2], { y: -7, rotate: -45, duration: 0.20 }, 0)
+      .to(mobileMenu, { height: "auto", opacity: 1, pointerEvents: "auto", duration: 0.3 }, 0)
+      .fromTo(".mobile-link",
+        { y: -20, opacity: 0, scale: 0.9 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.2,
+          stagger: 0.06,
+          ease: "back.out(1.7)",
+        }, 0.1);
+
+    let open = false;
+    function toggleMenu() {
+      open = !open;
+      menuBtn.setAttribute('aria-expanded', String(open));
+      if (open) {
+        siteNav.classList.add('rounded-b-2xl');
+        masterTL.play();
+      } else {
+        masterTL.reverse().then(() => {
+          siteNav.classList.remove('rounded-b-2xl');
+        });
+      }
+    }
+
+    const contactBtn = document.querySelector('.gsap-contact-btn');
+    if (contactBtn) {
+      contactBtn.addEventListener('mouseenter', () => {
+        gsap.to(contactBtn, { scale: 1.05, duration: 0.3, ease: 'power2.out' });
+      });
+      contactBtn.addEventListener('mouseleave', () => {
+        gsap.to(contactBtn, { scale: 1, duration: 0.3, ease: 'power2.in' });
+      });
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', () => {
+      if (open) toggleMenu();
+    }));
+
+    // --- ADDED: NEW GSAP ANIMATIONS ---
+    document.addEventListener('DOMContentLoaded', () => {
+      // First, we must register the plugin
+      gsap.registerPlugin(ScrollTrigger);
+
+      // 1. INTRO ANIMATION - For navbar and hero text
+      const introTL = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1 } });
+
+      introTL
+        .from('#site-nav', { yPercent: -100 }) // Navbar slides in from top
+        .from('.hero-title span', { // FOVA letters appear one by one
+            y: 100,
+            opacity: 0,
+            stagger: 0.1,
+            duration: 0.5,
+            ease: 'back.out(1.7)'
+        }, "-=0.5") // Overlap with previous animation
+        .from('.hero-tagline', { // Tagline slides up from behind mask
+            yPercent: 100,
+            opacity: 0,
+            duration: 0.8
+        }, "-=0.6"); // Overlap again for a fluid feel
+
+      
+      // 2. SCROLLTRIGGER ANIMATION - Hero section shrinks on scroll
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: '#home', // The animation starts when the #home section is at the top
+          start: 'top top',
+          end: 'bottom top', // Ends when the bottom of the hero hits the top of the viewport
+          scrub: 1, // Smoothly ties the animation to the scrollbar
+          pin: true, // Pins the #home section while the animation happens
+          pinSpacing: false, // Prevents extra space from being added after pinning
+        }
+      })
+      .to('.hero-content', { // Target the content div
+        scale: 0.5,      // Shrink it down
+        opacity: 0,        // Fade it out
+        ease: 'power2.inOut'
+      });
+    });
+
+  </script>
+</body> -->
+
+</html>
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Premium Glass Navbar • GSAP + Tailwind</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="text-gray-900">
+
+  <nav id="site-nav"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass md:bg-transparent md:backdrop-filter-none">
+    <div id="nav-wrapper" class="mx-auto  max-w-[1500px] md:backdrop-blur-lg cstm-dark">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8 ">
+        <div class="flex items-center justify-between h-16">
+
+          <a href="#">
+            <img src="./assets/fova_2.png" alt="FOVA" class="h-8 sm:h-8 md:h-9 w-auto" />
+          </a>
+
+          <ul class="hidden md:flex justify-center gap-10 flex-1">
+            <li class="group">
+              <a href="#" class="gold-text transition-colors font-semibold relative py-2">
+                <span>Home</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2  -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#" class="gold-text transition-colors font-semibold relative py-2">
+                <span>About Us</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out  left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#" class="gold-text transition-colors font-semibold relative py-2">
+                <span>Portfolio</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#" class="gold-text transition-colors font-semibold relative py-2">
+                <span>Services</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#" class="gold-text transition-colors font-semibold relative py-2">
+                <span>Clients</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out  left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+          </ul>
+
+
+          <div class="flex items-center gap-3">
+            <a href="#contact"
+              class="hidden md:inline-flex contact-btn gsap-contact-btn gold-text border-blue-500 items-center rounded-3xl hover:text-blue-600 transition-colors relative">
+              <div class="cstm-dark py-2 px-2 rounded-3xl">
+                Let’s Connect
+              </div>
+            </a>
+
+            <button id="menu-btn"
+              class="md:hidden group relative h-9 w-9 grid place-items-center rounded-xl transition-colors"
+              aria-label="Toggle menu" aria-expanded="false">
+              <div class="relative h-4 w-6">
+                <span class="absolute left-0 top-0 block h-0.5 w-6 bg-[#ebd496] rounded transition-none"></span>
+                <span
+                  class="absolute right-0 top-1/2 -translate-y-1/2  block h-0.5 w-4 bg-[#ebd496] rounded transition-none"></span>
+                <span class="absolute left-0 bottom-0 block h-0.5 w-6 bg-[#ebd496] rounded transition-none"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="mobile-menu" class="md:hidden cstm-dark">
+      <div class="px-4 pt-2 pb-4 space-y-2">
+        <a href="#" class="gold-text mobile-link block px-3 py-2 rounded-lg font-semibold">Home</a>
+        <a href="#" class="gold-text mobile-link block px-3 py-2 rounded-lg font-semibold">About Us</a>
+        <a href="#" class="gold-text mobile-link block px-3 py-2 rounded-lg font-semibold">Portfolio</a>
+        <a href="#" class="gold-text mobile-link block px-3 py-2 rounded-lg font-semibold">Services</a>
+        <a href="#" class="gold-text mobile-link block px-3 pt-2 pb-6 rounded-lg font-semibold">Clients</a>
+        <a href="#contact" class="mobile-link mt-2 gold-text contact-btn text-center rounded-xl relative overflow-hidden">
+          <div class="contact-btn cstm-dark border-blue-500 py-2 rounded-3xl">
+            Let’s Connect
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="pt-20">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <h1 class="text-4xl font-semibold mb-4">Welcome</h1>
+      <p class="text-gray-600 mb-8">Permanent glass navbar with GSAP menu animation.</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="h-40 rounded-2xl bg-gradient-to-br from-pink-200 to-pink-400"></div>
+        <div class="h-40 rounded-2xl bg-gradient-to-br from-indigo-200 to-indigo-400"></div>
+        <div class="h-40 rounded-2xl bg-gradient-to-br from-green-200 to-green-400"></div>
+        <div class="h-40 rounded-2xl bg-gradient-to-br from-yellow-200 to-yellow-400"></div>
+        <div class="h-40 rounded-2xl bg-gradient-to-br from-sky-200 to-sky-400"></div>
+        <div class="h-40 rounded-2xl bg-gradient-to-br from-purple-200 to-purple-400"></div>
+      </div>
+    </section>
+    <section id="contact" class="h-[1200px] bg-gray-50"></section>
+  </main>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const burgerLines = menuBtn.querySelectorAll('span');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const siteNav = document.getElementById('site-nav'); // Get the main nav element
+
+    // Prepare initial state - hide the mobile menu content
+    gsap.set(mobileMenu, { height: 0, opacity: 0, pointerEvents: "none" });
+
+    // Master timeline
+    const masterTL = gsap.timeline({ paused: true, defaults: { ease: "power3.inOut" } });
+
+    // Hamburger to cross + menu expand
+    masterTL
+      .to(burgerLines[0], { y: 7, rotate: 45, duration: 0.20 }, 0)
+      .to(burgerLines[1], { opacity: 0, duration: 0.15 }, 0)
+      .to(burgerLines[2], { y: -7, rotate: -45, duration: 0.20 }, 0)
+      // Animate the height and opacity of the mobile menu itself to reveal the content
+      .to(mobileMenu, { height: "auto", opacity: 1, pointerEvents: "auto", duration: 0.3 }, 0)
+      // Stagger in the links
+      .fromTo(".mobile-link",
+        { y: -20, opacity: 0, scale: 0.9 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.2,
+          stagger: 0.06,
+          ease: "back.out(1.7)",
+        }, 0.1); // Start staggering in links shortly after the menu starts expanding
+
+
+    let open = false;
+    function toggleMenu() {
+      open = !open;
+      menuBtn.setAttribute('aria-expanded', String(open));
+      if (open) {
+        siteNav.classList.add('rounded-b-2xl'); // Add rounding when menu opens
+        masterTL.play();
+      } else {
+        masterTL.reverse().then(() => {
+          // Only remove rounding after the reverse animation is complete
+          siteNav.classList.remove('rounded-b-2xl');
+        });
+      }
+    }
+
+    const contactBtn = document.querySelector('.gsap-contact-btn');
+
+    // 2. Add event listeners for mouse entering and leaving
+    if (contactBtn) {
+      contactBtn.addEventListener('mouseenter', () => {
+        gsap.to(contactBtn, {
+          scale: 1.05,
+          duration: 0.3,
+          ease: 'power2.out'
+        });
+      });
+
+      contactBtn.addEventListener('mouseleave', () => {
+        gsap.to(contactBtn, {
+          scale: 1,
+          duration: 0.3,
+          ease: 'power2.in'
+        });
+      });
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', () => {
+      if (open) toggleMenu();
+    }));
+  </script>
+</body>
+
+</html> -->
