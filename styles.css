@@ -43,15 +43,15 @@ html {
   /* background: url('./assets//web-bg-img.jpg') no-repeat center center;
     background-size: cover; */
   /* diagonal gradient with fixed separation */
-  background: linear-gradient(135deg,#0a0909 0%, #0a0909 50%, #f8cf46 65%, #ffe9a2 100%);
+  background: linear-gradient(135deg,#0a0909 0%, #0a0909 40%, #dfb32fd5 75%, #dfb32fd5 100%);
   background-size: 200% 200%;
-  animation: fluidDiagonal 8s ease-in-out infinite;
+  animation: fluidDiagonal 7s ease-in-out infinite;
   color: white;
 }
 @keyframes fluidDiagonal {
-  0%   { background-position: 45% 40%; }
-  50%  { background-position: 55% 60%; }
-  100% { background-position: 45% 40%; }
+  0%   { background-position: 25% 20%; }
+  50%  { background-position: 40% 35%; }
+  100% { background-position: 25% 20%; }
 }
 
 
