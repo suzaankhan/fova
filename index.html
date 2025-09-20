@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FOVA</title>
+  <title>FOVA | Premium Videography</title>
 
   <script src="https://cdn.tailwindcss.com"></script>
 
@@ -12,6 +12,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
   <link rel="stylesheet" href="styles.css">
 
@@ -26,43 +27,43 @@
         <div class="flex items-center justify-between h-16">
 
           <a href="#home">
-            <img src="./assets/fova_2.png" alt="FOVA" class="h-8 sm:h-8 md:h-9 w-auto" />
+            <img src="./assets/fova_2.png" alt="FOVA" class="filter brightness-0 invert h-8 sm:h-8 md:h-8 w-auto" />
           </a>
 
           <ul class="hidden md:flex justify-center gap-10 flex-1">
             <li class="group">
               <a href="#home" class="gold-text transition-colors relative py-2">
-                <span class="navbar-font">Home</span>
+                <span class="tracking-widest text-sm">HOME</span>
                 <span
-                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+                  class="absolute bottom-0 left-0 w-0 h-[1px] gold-underline transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
               </a>
             </li>
             <li class="group">
-              <a href="#about" class="gold-text transition-colors font-semibold relative py-2">
-                <span>About Us</span>
+              <a href="#about" class="gold-text transition-colors relative py-2">
+                <span class="tracking-widest text-sm">ABOUT US</span>
                 <span
-                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+                  class="absolute bottom-0 left-0 w-0 h-[1px] gold-underline transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
               </a>
             </li>
             <li class="group">
-              <a href="#portfolio" class="gold-text transition-colors font-semibold relative py-2">
-                <span>Portfolio</span>
+              <a href="#portfolio" class="gold-text transition-colors relative py-2">
+                <span class="tracking-widest text-sm">PORTFLIO</span>
                 <span
-                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+                  class="absolute bottom-0 left-0 w-0 h-[1px] gold-underline transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
               </a>
             </li>
             <li class="group">
-              <a href="#services" class="gold-text transition-colors font-semibold relative py-2">
-                <span>Services</span>
+              <a href="#services" class="gold-text transition-colors relative py-2">
+                <span class="tracking-widest text-sm">SERVICES</span>
                 <span
-                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+                  class="absolute bottom-0 left-0 w-0 h-[1px] gold-underline transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
               </a>
             </li>
             <li class="group">
-              <a href="#clients" class="gold-text transition-colors font-semibold relative py-2">
-                <span>Clients</span>
+              <a href="#clients" class="gold-text transition-colors relative py-2">
+                <span class="tracking-widest text-sm">CLIENTS</span>
                 <span
-                  class="absolute bottom-0 left-0 w-0 h-0.5 gold-bg transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+                  class="absolute bottom-0 left-0 w-0 h-[1px] gold-underline transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
               </a>
             </li>
           </ul>
@@ -71,7 +72,7 @@
           <div class="flex items-center gap-3">
             <a href="#contact"
               class="hidden md:inline-flex contact-btn gsap-contact-btn gold-text border-blue-500 items-center rounded-3xl hover:text-blue-600 transition-colors relative">
-              <div class="cstm-dark py-2 px-2 rounded-3xl">
+              <div class="cstm-dark py-1 px-4 rounded-3xl">
                 Let’s Connect
               </div>
             </a>
@@ -80,10 +81,10 @@
               class="md:hidden group relative h-9 w-9 grid place-items-center rounded-xl transition-colors"
               aria-label="Toggle menu" aria-expanded="false">
               <div class="relative h-4 w-6">
-                <span class="absolute left-0 top-0 block h-0.5 w-6 bg-[#ebd496] rounded transition-none"></span>
+                <span class="absolute left-0 top-0 block h-[1px] w-6 bg-[#ebd496] rounded transition-none"></span>
                 <span
-                  class="absolute right-0 top-1/2 -translate-y-1/2 block h-0.5 w-4 bg-[#ebd496] rounded transition-none"></span>
-                <span class="absolute left-0 bottom-0 block h-0.5 w-6 bg-[#ebd496] rounded transition-none"></span>
+                  class="absolute right-0 top-1/2 -translate-y-1/2 block h-[1px] w-4 bg-[#ebd496] rounded transition-none"></span>
+                <span class="absolute left-0 bottom-0 block h-[1px] w-6 bg-[#ebd496] rounded transition-none"></span>
               </div>
             </button>
           </div>
@@ -110,18 +111,90 @@
   </nav>
 
   <main>
-    <section id="home" class="hero-section relative w-full h-screen text-white">
+    <section id="home" class="hero-section relative w-full h-screen text-white pt-10">
       <div class="hero-content text-center">
-        <h1 class="hero-title text-6xl md:text-8xl font-bold uppercase tracking-wider overflow-hidden">
+        <h1 class="hero-title text-5xl font-thin md:text-8xl font-bold uppercase tracking-wider overflow-hidden">
           <span>F</span><span>O</span><span>V</span><span>A</span>
         </h1>
         <div class="mask-container mt-4">
-          <p class="hero-tagline text-lg md:text-xl font-light">Crafting Cinematic Stories for Brands.</p>
+          <!-- <p class="hero-tagline text-lg md:text-xl font-light">Crafting Cinematic Stories for Brands.</p> -->
+          <p class="hero-tagline text-xl md:text-2xl text-gray-300 mb-16 max-w-2xl uppercase tracking-widest">CINEMATIC
+            STORYTELLING FOR THE DISCRIMINATING EYE</p>
         </div>
+        <i class="arrow-icon fa-solid fa-chevron-down arrow"></i>
       </div>
     </section>
 
-    <div id="content-wrapper" class="relative z-10 bg-[#0b090a]">
+    <!-- <div id="about" class="border-[1px] max-w-[1200px] h-screen mx-auto pt-16 md:px-[50px]">
+      <h3 class="gold-text md:text-3xl sm:text-2xl text-xl">ABOUT US</h3>
+      <div class="border-[1px] mt-[25px] flex-col lg:flex-row gap-8">
+        <div>
+          <p class="light-text">At Fova, we specialize in creating high-quality, professional videos that help brands tell their stories and
+          elevate their marketing campaigns. Our team of experienced professionals combines creative vision with
+          technical expertise, using top-of-the-line cameras and cutting-edge production techniques to deliver content
+          that stands out.
+
+          We understand the power of visual storytelling and are dedicated to producing videos that not only capture
+          attention but also communicate your brand’s message effectively. From concept to final cut, Fova ensures every
+          project is crafted with precision, creativity, and an unwavering commitment to quality.
+
+          Whether it’s promotional content, advertisements, or brand campaigns, we bring ideas to life and help
+          businesses shine in a competitive market.</p>
+        </div>
+        <div></div>
+      </div>
+    </div> -->
+
+    <div id="about" class="max-w-[1200px] min-h-screen mx-auto pt-16 md:px-[50px] px-4">
+      <h3 class="gold-text md:text-3xl sm:text-2xl text-xl">ABOUT US</h3>
+
+      <div class="mt-[25px] flex flex-col lg:flex-row gap-8">
+        <div class="lg:w-1/2">
+          <p class="light-text">
+            At Fova, we specialize in creating high-quality, professional videos that help brands tell their stories and
+            elevate their marketing campaigns. Our team of experienced professionals combines creative vision with
+            technical expertise, using top-of-the-line cameras and cutting-edge production techniques to deliver content
+            that stands out.
+
+            We understand the power of visual storytelling and are dedicated to producing videos that not only capture
+            attention but also communicate your brand's message effectively. From concept to final cut, Fova ensures
+            every
+            project is crafted with precision, creativity, and an unwavering commitment to quality.
+
+            Whether it's promotional content, advertisements, or brand campaigns, we bring ideas to life and help
+            businesses shine in a competitive market.
+          </p>
+        </div>
+
+        <!-- Right side - Counter stats -->
+        <div class="lg:w-1/2 flex items-center justify-center">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-md">
+            <!-- First counter -->
+            <div class="text-center">
+              <div class="counter-value gold-text text-5xl md:text-6xl font-bold" data-target="100">0</div>
+              <div class="light-text mt-2 text-lg">VIDEOS</div>
+            </div>
+
+            <!-- Vertical divider for desktop, horizontal for mobile -->
+            <div class="hidden md:block md:border-r md:border-gray-600"></div>
+            <div class="md:hidden border-t border-gray-600 col-span-2 -mt-4"></div>
+
+            <!-- Second counter -->
+            <div class="text-center">
+              <div class="counter-value gold-text text-5xl md:text-6xl font-bold" data-target="10">0</div>
+              <div class="light-text mt-2 text-lg">CLIENTS</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section></section>
+    <section></section>
+    <section></section>
+    <section></section>
+
+    <!-- <div id="content-wrapper" class="relative z-10 bg-[#0b090a]">
       <section id="about" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <h1 class="text-4xl gold-text font-semibold mb-4">About Us</h1>
         <p class="text-gray-400 mb-8">This is where your content will go.</p>
@@ -136,7 +209,7 @@
       <section id="services" class="h-96"></section>
       <section id="clients" class="h-96 bg-gray-900"></section>
       <section id="contact" class="h-[1200px] bg-gray-800"></section>
-    </div>
+    </div> -->
   </main>
   <script>
     const menuBtn = document.getElementById('menu-btn');
@@ -144,6 +217,9 @@
     const burgerLines = menuBtn.querySelectorAll('span');
     const mobileLinks = document.querySelectorAll('.mobile-link');
     const siteNav = document.getElementById('site-nav');
+    const arrowDown = document.getElementsByClassName('arrow-icon')[0];
+
+
 
     gsap.set(mobileMenu, { height: 0, opacity: 0, pointerEvents: "none" });
     const masterTL = gsap.timeline({ paused: true, defaults: { ease: "power3.inOut" } });
@@ -199,7 +275,6 @@
 
       gsap.fromTo(siteNav, { yPercent: -100 }, { yPercent: 0, duration: 0.2, ease: "power2.out" })
 
-      // THIS IS THE KEY CHANGE: from() becomes to()
       introTL
         .to('#site-nav', { y: 0 }) // Animate TO y:0 (final position) from the CSS state
         .from('.hero-title span', {
@@ -213,7 +288,15 @@
           yPercent: 100,
           opacity: 0,
           duration: 0.8
-        }, "-=0.6");
+        }, "-=0.6")
+        .fromTo(arrowDown, { opacity: 0 }, { opacity: 1, duration: 0.1 })
+        .to(arrowDown, {
+          y: -20,
+          duration: 0.8,
+          repeat: -1,
+          yoyo: true,
+          ease: "power1.inOut",
+        });
 
       gsap.timeline({
         scrollTrigger: {
@@ -221,26 +304,52 @@
           start: 'top top',
           end: 'bottom top',
           scrub: 0.3,
-          pin: true,
+          // pin: true,
           pinSpacing: false,
         }
       })
         .to('.hero-content', {
-          y: -100,
-          scale: 2.0,
+          y: 200,
+          scale: 1.5,
           opacity: 0,
-          // ease: 'bounce.inOut',
-          // ease: "slow(0.7,0.7,false)",
           ease: "power2.inOut",
         });
+
+      const counters = document.querySelectorAll('.counter-value');
+
+      // Create a ScrollTrigger for the about section
+      ScrollTrigger.create({
+        trigger: "#about",
+        start: "top 70%",
+        onEnter: () => animateCounters(),
+        once: true
+      });
+
+      function animateCounters() {
+        counters.forEach(counter => {
+          const target = parseInt(counter.getAttribute('data-target'));
+          const duration = 3;
+
+          gsap.to(counter, {
+            innerText: target,
+            duration: duration,
+            snap: { innerText: 1 },
+            stagger: 1,
+            ease: "power1.out",
+            onUpdate: function () {
+              if (Math.round(this.targets()[0].innerText) === target) {
+                counter.innerText = target + '+';
+              }
+            }
+          });
+        });
+      }
+
+
+
     });
   </script>
 
 </body>
 
 </html>
-
-
-
-
-
