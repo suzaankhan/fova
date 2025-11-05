@@ -1,0 +1,1171 @@
+<!-- 
+<body class="bg-[#0b090a] overflow-x-hidden">
+</body>
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FOVA | Premium Videography and Cinematic Storytelling">
+  <title>FOVA | Premium Videography</title>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body class="bg-[#0b090a] overflow-x-hidden">
+
+  <nav id="site-nav"
+    class="fixed top-0 left-0 w-full z-50 transition-all duration-300 glass md:bg-transparent md:backdrop-blur-0">
+    <div id="nav-wrapper" class="mx-auto glass max-w-[1500px] md:backdrop-blur-lg cstm-dark">
+      <div class="mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-16">
+
+          <a href="#home">
+            <img src="./assets/fova_2.png" alt="FOVA" class="filter brightness-0 invert h-8 sm:h-8 md:h-8 w-auto" />
+          </a>
+
+          <ul class="hidden md:flex justify-center gap-10 flex-1">
+            <li class="group">
+              <a href="#home" class="gold-text transition-colors relative py-2">
+                <span class="tracking-widest text-sm">HOME</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-[1px] gold-underline transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#about" class="gold-text transition-colors relative py-2">
+                <span class="tracking-widest text-sm">ABOUT US</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-[1px] gold-underline transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#portfolio" class="gold-text transition-colors relative py-2">
+                <span class="tracking-widest text-sm">PORTFOLIO</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-[1px] gold-underline transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <li class="group">
+              <a href="#services" class="gold-text transition-colors relative py-2">
+                <span class="tracking-widest text-sm">SERVICES</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-[1px] gold-underline transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li>
+            <!-- <li class="group">
+              <a href="#clients" class="gold-text transition-colors relative py-2">
+                <span class="tracking-widest text-sm">CLIENTS</span>
+                <span
+                  class="absolute bottom-0 left-0 w-0 h-[1px] gold-underline transition-all duration-300 ease-out left-1/2 -translate-x-1/2 group-hover:w-[90%]"></span>
+              </a>
+            </li> -->
+          </ul>
+
+
+          <div class="flex items-center gap-3">
+            <a href="#contact"
+              class="hidden md:inline-flex contact-btn gsap-contact-btn gold-text border-blue-500 items-center rounded-3xl hover:text-blue-600 transition-colors relative">
+              <div class="cstm-dark py-1 px-4 rounded-3xl">
+                Let's Connect
+              </div>
+            </a>
+
+            <button id="menu-btn"
+              class="md:hidden group relative h-9 w-9 grid place-items-center rounded-xl transition-colors"
+              aria-label="Toggle menu" aria-expanded="false">
+              <div class="relative h-4 w-6">
+                <span class="absolute left-0 top-0 block h-[1px] w-6 bg-[#ebd496] rounded transition-none"></span>
+                <span
+                  class="absolute right-0 top-1/2 -translate-y-1/2 block h-[1px] w-4 bg-[#ebd496] rounded transition-none"></span>
+                <span class="absolute left-0 bottom-0 block h-[1px] w-6 bg-[#ebd496] rounded transition-none"></span>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="mobile-menu" class="md:hidden glass cstm-dark">
+      <div class="px-4 pt-2 pb-4 space-y-2">
+        <a href="#home" class="gold-text mobile-link block px-3 py-2 rounded-lg tracking-widest">HOME</a>
+        <a href="#about" class="gold-text mobile-link block px-3 py-2 rounded-lg tracking-widest">ABOUT US</a>
+        <a href="#portfolio" class="gold-text mobile-link block px-3 py-2 rounded-lg tracking-widest">PORTFOLIO</a>
+        <a href="#services" class="gold-text mobile-link block px-3 py-2 rounded-lg tracking-widest">SERVICES</a>
+        <!-- <a href="#clients" class="gold-text mobile-link block px-3 pt-2 pb-6 rounded-lg tracking-widest">CLIENTS</a> -->
+        <a href="#contact"
+          class="mobile-link mt-2 gold-text contact-btn text-center rounded-xl relative overflow-hidden">
+          <div class="contact-btn cstm-dark border-blue-500 py-2 rounded-3xl">
+            Let's Connect
+          </div>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <main class="overflow-x-hidden">
+    <section id="home" class="hero-section relative w-full h-screen text-white pt-10">
+      <div class="hero-content text-center w-full px-4">
+        <h1 class="hero-title text-5xl font-thin md:text-8xl font-bold uppercase tracking-wider overflow-hidden">
+          <span>F</span><span>O</span><span>V</span><span>A</span>
+        </h1>
+        <div class="mask-container mt-4 w-full">
+          <p class="hero-tagline text-xl md:text-2xl text-gray-300 mb-16 max-w-2xl mx-auto uppercase tracking-widest">
+            CINEMATIC
+            STORYTELLING FOR THE DISCRIMINATING EYE</p>
+        </div>
+        <i class="arrow-icon fa-solid fa-chevron-down arrow"></i>
+      </div>
+    </section>
+
+    <div id="about"
+      class="flex flex-col justify-center max-w-[1200px] min-h-screen mx-auto md:px-[50px] px-4 py-16 w-full">
+      <h3 class="gold-text md:text-3xl sm:text-2xl text-xl text-center md:text-left">ABOUT US</h3>
+
+      <div class="mt-8 flex flex-col lg:flex-row gap-8 w-full">
+
+        <div class="lg:w-1/2 w-full">
+          <p class="light-text text-left leading-relaxed">
+            FOVA is a professional photo and videography agency committed to creating impactful visual content that
+            helps businesses and brands stand out in a competitive market.
+            <br><br>
+            With a strong focus on automotive and product shoots, we bring together creativity, technical expertise, and
+            storytelling to deliver cinematic imagery and videos that not only capture attention but also build lasting
+            brand value. From concept to execution, our approach emphasizes precision, innovation, and professionalism,
+            ensuring that every project aligns with our clients' goals and communicates their vision effectively.
+            <br><br>
+            At FOVA, we view every frame as an opportunity to elevate brand identity and create meaningful connections
+            with audiences.
+          </p>
+        </div>
+
+        <div class="lg:w-1/2 w-full flex items-center justify-center">
+          <div class="flex flex-col md:flex-row items-center gap-8 w-full max-w-md justify-center">
+
+            <div class="text-center">
+              <div class="counter-value gold-text text-5xl md:text-6xl font-bold" data-target="100">0</div>
+              <div class="light-text mt-2 text-lg">VIDEOS</div>
+            </div>
+
+            <div class="md:hidden border-t border-gray-600 w-full mx-auto my-2"></div>
+            <div class="hidden md:block border-r border-[#878787] mx-4 h-16"></div>
+
+            <div class="text-center">
+              <div class="counter-value gold-text text-5xl md:text-6xl font-bold" data-target="10">0</div>
+              <div class="light-text mt-2 text-lg">CLIENTS</div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- PORTFOLIO SECTION -->
+    <section id="portfolio" class="sm:min-h-screen py-20 portfolio-bg">
+      <div class="max-w-[1200px] mx-auto md:px-[50px] px-4 w-full">
+        <!-- Portfolio Header -->
+        <h3 class="gold-text md:text-3xl sm:text-2xl text-xl text-center md:text-left mb-12">PORTFOLIO</h3>
+
+        <!-- Video Grid - Two independent horizontal rows on mobile -->
+        <div class="relative">
+          <!-- Mobile: Two independent horizontal scrolling rows -->
+          <div class="md:hidden space-y-6">
+            <!-- First Row -->
+            <div class="overflow-x-auto pb-4 -mx-4 px-4">
+              <div class="flex space-x-4 min-w-max">
+                <div class="portfolio-grid-mobile-row-1 flex space-x-4">
+                  <!-- First half of videos will be inserted here -->
+                </div>
+              </div>
+            </div>
+
+            <!-- Second Row -->
+            <div class="overflow-x-auto pb-4 -mx-4 px-4">
+              <div class="flex space-x-4 min-w-max">
+                <div class="portfolio-grid-mobile-row-2 flex space-x-4">
+                  <!-- Second half of videos will be inserted here -->
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Desktop grid (unchanged - 3 columns) -->
+          <div class="hidden md:block">
+            <div class="portfolio-grid grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolio-grid">
+              <!-- Videos will be dynamically inserted here for desktop -->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div id="video-modal"
+      class="fixed inset-0 z-[100] flex hidden items-center justify-center bg-black bg-opacity-90 p-4">
+      <div class="relative max-w-4xl w-full max-h-[80vh]">
+        <!-- Close Button -->
+        <button id="close-modal"
+          class="absolute -top-12 right-0 text-white text-2xl hover:text-[#ebd496] transition-colors duration-300">
+          <i class="fas fa-times"></i>
+        </button>
+
+        <!-- Video Container -->
+        <div class="aspect-video bg-black rounded-lg overflow-hidden">
+          <video id="modal-video" class="w-full h-full" controls preload="none">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+
+        <!-- Video Info -->
+        <div id="video-info" class="mt-4 text-white">
+          <h3 id="video-title" class="text-xl font-semibold"></h3>
+          <p id="video-description" class="light-text mt-1"></p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- SERVICES SECTION -->
+    <section id="services" class="min-h-screen py-20 relative overflow-hidden">
+      <div class="max-w-[1200px] mx-auto md:px-[50px] px-4 w-full">
+        <!-- Section Header -->
+        <h3 class="gold-text md:text-3xl sm:text-2xl text-xl text-center md:text-left mb-16">OUR SERVICES</h3>
+
+        <!-- Services Content -->
+        <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+
+          <!-- Text Content - Left Side (Web) / Overlay (Mobile) -->
+          <div class="lg:w-1/2 w-full relative">
+            <!-- Mobile Background Image (Hidden on desktop) -->
+            <div class="lg:hidden absolute inset-0 -z-10 rounded-2xl overflow-hidden">
+              <img src="./assets/services/service-bg.jpg" alt="Videography Services"
+                class="w-full h-full object-cover opacity-40">
+              <div class="absolute inset-0 bg-black bg-opacity-60"></div>
+            </div>
+
+            <!-- Text Container with Shadow -->
+            <div
+              class="services-text-container bg-gradient-to-br from-[#0b090a]/80 to-[#131313]/80 backdrop-blur-lg rounded-2xl p-8 lg:p-10 border border-[#e7e7e7]/10 shadow-2xl shadow-black/50">
+
+              <!-- Service 1: Videography -->
+              <div class="service-item mb-10">
+                <div class="flex items-center gap-4 mb-4">
+                  <div
+                    class="service-icon w-12 h-12 rounded-full bg-[#292364]/30 border border-[#e7e7e7]/20 flex items-center justify-center">
+                    <i class="fas fa-film text-[#e7e7e7] text-lg"></i>
+                  </div>
+                  <h4 class="gold-text text-2xl font-semibold">Premium Videography</h4>
+                </div>
+                <p class="light-text leading-relaxed">
+                  Cinematic storytelling through high-end videography. We capture your brand's essence with
+                  professional equipment, expert lighting, and cinematic techniques that transform ordinary
+                  moments into extraordinary visual experiences.
+                </p>
+                <ul class="light-text mt-4 space-y-2 text-sm">
+                  <li class="flex items-center gap-2">
+                    <i class="fas fa-check text-[#ebd496] text-xs"></i>
+                    <span>4K/8K Ultra HD Resolution</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fas fa-check text-[#ebd496] text-xs"></i>
+                    <span>Professional Color Grading</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fas fa-check text-[#ebd496] text-xs"></i>
+                    <span>Multi-camera Setup</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Service 2: Reels Shooting -->
+              <div class="service-item">
+                <div class="flex items-center gap-4 mb-4">
+                  <div
+                    class="service-icon w-12 h-12 rounded-full bg-[#1a1549]/30 border border-[#e7e7e7]/20 flex items-center justify-center">
+                    <i class="fas fa-mobile-alt text-[#e7e7e7] text-lg"></i>
+                  </div>
+                  <h4 class="gold-text text-2xl font-semibold">Reels & Social Content</h4>
+                </div>
+                <p class="light-text leading-relaxed">
+                  Engaging short-form content designed for maximum impact on social platforms.
+                  We create scroll-stopping reels that capture attention, drive engagement, and
+                  elevate your digital presence with trending formats and viral potential.
+                </p>
+                <ul class="light-text mt-4 space-y-2 text-sm">
+                  <li class="flex items-center gap-2">
+                    <i class="fas fa-check text-[#ebd496] text-xs"></i>
+                    <span>Platform-Optimized Formats</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fas fa-check text-[#ebd496] text-xs"></i>
+                    <span>Trending Audio Integration</span>
+                  </li>
+                  <li class="flex items-center gap-2">
+                    <i class="fas fa-check text-[#ebd496] text-xs"></i>
+                    <span>Rapid Turnaround Delivery</span>
+                  </li>
+                </ul>
+              </div>
+
+              <!-- Additional Services Mini Grid -->
+              <div class="mt-8 grid grid-cols-2 gap-4">
+                <div class="text-center p-3 rounded-lg bg-[#0b090a]/50 border border-[#e7e7e7]/10">
+                  <i class="fas fa-car text-[#ebd496] text-lg mb-2"></i>
+                  <p class="light-text text-xs">Automotive</p>
+                </div>
+                <div class="text-center p-3 rounded-lg bg-[#0b090a]/50 border border-[#e7e7e7]/10">
+                  <i class="fas fa-gem text-[#ebd496] text-lg mb-2"></i>
+                  <p class="light-text text-xs">Product Shoots</p>
+                </div>
+                <div class="text-center p-3 rounded-lg bg-[#0b090a]/50 border border-[#e7e7e7]/10">
+                  <i class="fas fa-user text-[#ebd496] text-lg mb-2"></i>
+                  <p class="light-text text-xs">Brand Films</p>
+                </div>
+                <div class="text-center p-3 rounded-lg bg-[#0b090a]/50 border border-[#e7e7e7]/10">
+                  <i class="fas fa-magic text-[#ebd496] text-lg mb-2"></i>
+                  <p class="light-text text-xs">Post Production</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Portrait Image - Right Side (Hidden on Mobile) -->
+          <div class="lg:w-1/2 w-full hidden lg:block">
+            <div class="relative">
+              <img src="./assets/services/services-bg.jpg" alt="FOVA Videography in Action"
+                class="w-full h-[600px] object-cover rounded-2xl shadow-2xl shadow-black/50">
+              <div class="absolute inset-0 rounded-2xl border border-[#e7e7e7]/20"></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- CLIENTS SECTION -->
+    <!-- <section id="clients"
+      class="py-20 relative overflow-hidden bg-[linear-gradient(180deg,#25245e_0%,#131313_60%,#0a0a0a_98%)]">
+
+      <div class="max-w-[1200px] mx-auto md:px-[50px] w-full relative z-10">
+        <div class="text-center mb-16">
+          <h3 class="text-white md:text-4xl sm:text-3xl text-2xl font-light mb-4">TRUSTED BY LEADING BRANDS</h3>
+          <p class="text-purple-200 text-lg max-w-2xl mx-auto">
+            Collaborating with visionary brands to create unforgettable visual experiences
+          </p>
+        </div>
+
+        <div class="relative">
+
+          <div class="absolute left-0 top-0 bottom-0 w-px bg-white/30 z-10"></div>
+          <div class="absolute right-0 top-0 bottom-0 w-px bg-white/30 z-10"></div>
+
+          <div class="overflow-hidden">
+            <div id="clients-carousel" class="flex space-x-8 py-4">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="min-h-screen py-20 relative overflow-hidden">
+      <div class="absolute inset-0 bg-[linear-gradient(135deg,#0a0a0a_0%,#131313_50%,#1a1549_95%)]">
+
+      </div>
+      <!-- Animated Waves -->
+      <div class="absolute bottom-0 left-0 right-0 h-32 bg-wave-pattern opacity-20 animate-float"></div>
+      </div>
+
+      <div class="max-w-[1200px] mx-auto md:px-[50px] px-4 w-full relative z-10">
+        <!-- Contact Header -->
+        <div class="text-center mb-16">
+          <h3 class="text-white md:text-4xl sm:text-3xl text-2xl font-light mb-4">GET IN TOUCH</h3>
+          <p class="text-blue-200 text-lg max-w-2xl mx-auto">
+            Ready to bring your vision to life? Let's create something extraordinary together.
+          </p>
+        </div>
+
+        <!-- Contact Content -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+          <!-- Contact Info -->
+          <div class="order-2 lg:order-none space-y-8">
+            <div class="group">
+              <h4 class="text-white text-xl font-semibold mb-4 flex items-center">
+                <i
+                  class="fas fa-envelope text-[#ebd496] mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                Email Us
+              </h4>
+              <p class="text-blue-200 text-lg">fova2311@gmail.com</p>
+            </div>
+
+            <div class="group">
+              <h4 class="text-white text-xl font-semibold mb-4 flex items-center">
+                <i class="fas fa-phone text-[#ebd496] mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                Let's Talk
+              </h4>
+              <a href="tel:+919967373341"
+                class="text-blue-200 text-lg underline hover:text-blue-300 transition-colors duration-300">
+                +91 9967373341
+              </a>
+            </div>
+
+            <div class="group">
+              <h4 class="text-white text-xl font-semibold mb-4 flex items-center">
+                <i
+                  class="fas fa-map-marker-alt text-[#ebd496] mr-3 group-hover:scale-110 transition-transform duration-300"></i>
+                Based In
+              </h4>
+              <p class="text-blue-200 text-lg">Mira Road, Mumbai</p>
+            </div>
+
+            <!-- Social Links -->
+            <div class="pt-8">
+              <h4 class="text-white text-xl font-semibold mb-6">Follow Our Work</h4>
+              <div class="flex space-x-6">
+                <a href="https://www.instagram.com/fova_2k25?igsh=MXM1Y2U0bW5lcXMwOA==" target="_blank" class="group">
+                  <div
+                    class="w-12 h-12 rounded-full bg-blue-600/20 border border-[#ebeeff] border-opacity-30 flex items-center justify-center group-hover:bg-blue-500/40 group-hover:scale-110 transition-all duration-300">
+                    <i class="fab fa-instagram text-white text-lg"></i>
+                  </div>
+                </a>
+                <!-- <a href="#" class="group">
+                  <div
+                    class="w-12 h-12 rounded-full bg-blue-600/20 border border-[#ebeeff] border-opacity-30 flex items-center justify-center group-hover:bg-blue-500/40 group-hover:scale-110 transition-all duration-300">
+                    <i class="fab fa-linkedin-in text-white text-lg"></i>
+                  </div>
+                </a>
+                <a href="#" class="group">
+                  <div
+                    class="w-12 h-12 rounded-full bg-blue-600/20 border border-[#ebeeff] border-opacity-30 flex items-center justify-center group-hover:bg-blue-500/40 group-hover:scale-110 transition-all duration-300">
+                    <i class="fab fa-youtube text-white text-lg"></i>
+                  </div>
+                </a> -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div
+            class="order-1 lg:order-none bg-slate-800/30 backdrop-blur-lg rounded-2xl p-8 border border-white/30 shadow-2xl">
+            <form id="contact-form" action="https://formspree.io/f/xwprdowo" method="POST" class="space-y-6">
+              <!-- Hidden FormSubmit Fields -->
+              <input type="hidden" name="_subject" value="New contact from FOVA website!">
+
+              <!-- Email Input -->
+              <div class="space-y-2">
+                <label for="email" class="text-white text-sm font-medium">Your Email</label>
+                <input type="email" id="email" name="email" required
+                  class="w-full px-4 py-3 bg-slate-700/50 border border-white/30 rounded-lg text-white placeholder-blue-200/50 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 transition-all duration-300"
+                  placeholder="you@company.com">
+                <div id="email-error" class="text-red-400 text-sm hidden">Please enter a valid email address</div>
+              </div>
+
+              <!-- Message input -->
+              <div class="space-y-2">
+                <label for="message" class="text-white text-sm font-medium">Your Message</label>
+                <textarea id="message" name="message" type="text" required rows="6"
+                  class="w-full px-4 py-3 bg-slate-700/50 border border-white/30 rounded-lg text-white placeholder-blue-200/50 focus:outline-none focus:border-blue-400 focus:ring-2 focus:ring-blue-400/20 resize-none transition-all duration-300"
+                  placeholder="Tell us about your project, vision, and timeline..."></textarea>
+              </div>
+
+              <!-- Submit Button -->
+              <button type="submit" id="submit-btn"
+                class="w-full py-4 bg-[#565d8c] text-white font-semibold rounded-lg hover:bg-[#7178a8] transform transition-all duration-300 hover:scale-[1.02] active:scale-95 relative overflow-hidden group">
+                <span class="relative z-10">Send Message</span>
+                <!-- <div
+                  class="absolute inset-0 bg-gradient-to-r from-[#131313] to-purple-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                </div> -->
+
+                <!-- Loading Spinner -->
+                <div id="loading-spinner"
+                  class="hidden absolute inset-0 bg-purple-600 rounded-lg items-center justify-center">
+                  <!-- <div class="animate-spin rounded-full h-6 w-6 border-b-2 border-white"></div> -->
+                </div>
+              </button>
+
+              <!-- Success Message -->
+              <div id="success-message"
+                class="hidden p-4 bg-green-500/20 border border-green-400/30 rounded-lg text-green-200 text-center">
+                <i class="fas fa-check-circle mr-2"></i>
+                Message sent successfully! We'll get back to you soon.
+              </div>
+
+              <!-- Error Message -->
+              <div id="error-message"
+                class="hidden p-4 bg-red-500/20 border border-red-400/30 rounded-lg text-red-200 text-center">
+                <i class="fas fa-exclamation-circle mr-2"></i>
+                Failed to send message. Please try again or email us directly.
+              </div>
+            </form>
+          </div>
+
+
+
+        </div>
+      </div>
+    </section>
+
+
+
+  </main>
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const burgerLines = menuBtn.querySelectorAll('span');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+    const siteNav = document.getElementById('site-nav');
+    const arrowDown = document.getElementsByClassName('arrow-icon')[0];
+
+    // Portfolio variables
+    const portfolioItems = document.querySelectorAll('.portfolio-item');
+    const videoModal = document.getElementById('video-modal');
+    const modalVideo = document.getElementById('modal-video');
+    const closeModal = document.getElementById('close-modal');
+    const videoTitle = document.getElementById('video-title');
+    const videoDescription = document.getElementById('video-description');
+    const portfolioGrid = document.getElementById('portfolio-grid');
+
+    const portfolioData = [
+      {
+        // video: "./assets/fova-assets/videos/aromyra.mp4",
+        video: ".https://res.cloudinary.com/dagfw2mw8/video/upload/v1762356194/aromyra_fuoavv.mp4",
+        thumbnail: "./assets/fova-assets/thumbnails/aromyra-tn.png",
+        title: "Aromyra Fragrance Film",
+        description: "Cinematic Perfume Brand Visual"
+      },
+      {
+        // video: "./assets/fova-assets/videos/epitome-mustang.MOV",
+        video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762356222/epitome-mustang_a7gn8d.mp4",
+        thumbnail: "./assets/fova-assets/thumbnails/epitome-mustang-tn.PNG",
+        title: "Ford Mustang Showcase",
+        description: "Automotive Cinematic Edit"
+      },
+      {
+        // video: "./assets/fova-assets/videos/epitome-porche.mp4",
+        video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762356205/epitome-porche_mm9xvy.mp4",
+        thumbnail: "./assets/fova-assets/thumbnails/epitome-porche-tn.PNG",
+        title: "Porsche Feature Film",
+        description: "Luxury Car Highlight Reel"
+      },
+      {
+        // video: "./assets/fova-assets/videos/epitome-rr.mp4",   +100
+        video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762361775/epitome-rr-compressed_t1tepf.mp4",
+        thumbnail: "./assets/fova-assets/thumbnails/epitome-rr-tn.PNG",
+        title: "Rolls Royce Lifestyle Edit",
+        description: "Opulent Automotive Cinematic"
+      },
+      {
+        // video: "./assets/fova-assets/videos/epitome-showroom.mp4",      +100
+        video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762362852/epitome-showroom_1_so9lcj.mp4",
+        thumbnail: "./assets/fova-assets/thumbnails/epitome-showroom-tn.PNG",
+        title: "Premium Car Showroom Film",
+        description: "Brand & Experience Visual Story"
+      },
+      {
+        // video: "./assets/fova-assets/videos/epitome-soniyaa.mp4",
+        video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762356139/epitome-soniyaa_t14v8e.mp4",
+        thumbnail: "./assets/fova-assets/thumbnails/epitome-soniyaa-tn.PNG",
+        title: "Humanity on Wheels",
+        description: "A Heartfelt Community Initiative by Epitome Cars"
+      },
+      {
+        // video: "./assets/fova-assets/videos/esar-double-fortuner.mp4",
+        video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762356123/esar-double-fortuner_xpka52.mp4",
+        thumbnail: "./assets/fova-assets/thumbnails/esar-fortuner-tn.PNG",
+        title: "Toyota Fortuner Twin Drive",
+        description: "Dual Car Feature Film"
+      },
+      {
+        // video: "./assets/fova-assets/videos/esar-nexon.mp4",
+        video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762356188/esar-nexon_howdma.mp4",
+        thumbnail: "./assets/fova-assets/thumbnails/esar-nexon-tn.PNG",
+        title: "Tata Nexon Urban Drive",
+        description: "Compact SUV Lifestyle Shot"
+      },
+      {
+        // video: "./assets/fova-assets/videos/fncl-fortuner-black.mp4",
+        video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762356108/fncl-fortuner-black_idxvor.mp4",
+        thumbnail: "./assets/fova-assets/thumbnails/fncl-fortuner-black-tn.PNG",
+        title: "Fortuner Stealth Edition",
+        description: "Bold & Dynamic Cinematic Edit"
+      },
+      // {
+      //   // video: "./assets/fova-assets/videos/fncl-fortuner.mp4",        +100
+      //   video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762364977/fncl-fortuner_2_wlv0h0.mp4",
+      //   thumbnail: "./assets/fova-assets/thumbnails/fncl-fortuner-tn.PNG",
+      //   title: "Toyota Fortuner Showcase",
+      //   description: "Premium SUV Feature Highlight"
+      // },
+      {
+        // video: "./assets/fova-assets/videos/modi-landrover.mp4",
+        video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762356196/modi-landrover_qyfnum.mp4",
+        thumbnail: "./assets/fova-assets/thumbnails/modi-landrover-tn.jpg",
+        title: "Land Rover Driving Film",
+        description: "Luxury Off-Road Experience"
+      },
+      {
+        // video: "./assets/fova-assets/videos/rizma-delivery.mp4",          +100
+        video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762364224/rizma-delivery_1_rk3sds.mp4",
+        thumbnail: "./assets/fova-assets/thumbnails/rizma-delivery-tn.PNG",
+        title: "Car Delivery Experience",
+        description: "Customer Moment Storytelling"
+      },
+      {
+        // video: "./assets/fova-assets/videos/tcc-bmw-m5.mp4",
+        video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762356128/tcc-bmw-m5_qvn1tl.mp4",
+        thumbnail: "./assets/fova-assets/thumbnails/tcc-bmw-m5-tn.PNG",
+        title: "BMW M5 Performance Edit",
+        description: "High-Intensity Driving Cinematic"
+      },
+      {
+        // video: "./assets/fova-assets/videos/tcc-bmw-z4.mp4",
+        video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762356197/tcc-bmw-z4_chcbwg.mp4",
+        thumbnail: "./assets/fova-assets/thumbnails/tcc-bmw-z4-tn.PNG",
+        title: "BMW Z4 Roadster Film",
+        description: "Open-Top Lifestyle Feature"
+      },
+      {
+        // video: "./assets/fova-assets/videos/tcc-double-bmw.mp4",
+        video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762356177/tcc-double-bmw_ctuyzx.mp4",
+        thumbnail: "./assets/fova-assets/thumbnails/tcc-double-bmw-tn.PNG",
+        title: "Twin BMW Showcase",
+        description: "Paired Luxury Drive Cinematic"
+      }
+    ];
+
+
+    // Function to generate portfolio items - TWO MOBILE ROWS + DESKTOP GRID
+    function generatePortfolioItems() {
+      const portfolioGrid = document.getElementById('portfolio-grid'); // Desktop
+      const portfolioGridMobileRow1 = document.querySelector('.portfolio-grid-mobile-row-1'); // Mobile Row 1
+      const portfolioGridMobileRow2 = document.querySelector('.portfolio-grid-mobile-row-2'); // Mobile Row 2
+
+      const totalVideos = portfolioData.length;
+      const firstRowCount = Math.ceil(totalVideos / 2);
+
+      // Split videos for mobile rows
+      const firstRowVideos = portfolioData.slice(0, firstRowCount);
+      const secondRowVideos = portfolioData.slice(firstRowCount);
+
+      // Generate HTML for desktop (all videos in 3-column grid)
+      const desktopItemHTML = portfolioData.map(item => `
+    <div class="portfolio-item group relative overflow-hidden rounded-lg cursor-pointer"
+      data-video="${item.video}">
+      <div class="aspect-video bg-gray-800 relative overflow-hidden">
+        <img src="${item.thumbnail}" alt="${item.title}"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div
+          class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center transition-all duration-300 group-hover:bg-opacity-20">
+          <div
+            class="play-button w-16 h-16 rounded-full bg-[#ebd496] flex items-center justify-center transform transition-all duration-300 group-hover:scale-110">
+            <i class="fas fa-play text-[#0b090a] ml-1"></i>
+          </div>
+        </div>
+        <div class="loading-spinner absolute inset-0 hidden items-center justify-center">
+          <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[#ebd496]"></div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h4 class="gold-text text-lg font-semibold">${item.title}</h4>
+        <p class="light-text text-sm mt-1">${item.description}</p>
+      </div>
+    </div>
+  `).join('');
+
+      // Generate HTML for mobile row 1
+      const mobileRow1HTML = firstRowVideos.map(item => `
+    <div class="portfolio-item group relative overflow-hidden rounded-lg cursor-pointer flex-shrink-0 w-[280px]"
+      data-video="${item.video}">
+      <div class="aspect-video bg-gray-800 relative overflow-hidden">
+        <img src="${item.thumbnail}" alt="${item.title}"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div
+          class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center transition-all duration-300 group-hover:bg-opacity-20">
+          <div
+            class="play-button w-16 h-16 rounded-full bg-[#ebd496] flex items-center justify-center transform transition-all duration-300 group-hover:scale-110">
+            <i class="fas fa-play text-[#0b090a] ml-1"></i>
+          </div>
+        </div>
+        <div class="loading-spinner absolute inset-0 hidden items-center justify-center">
+          <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[#ebd496]"></div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h4 class="gold-text text-lg font-semibold">${item.title}</h4>
+        <p class="light-text text-sm mt-1">${item.description}</p>
+      </div>
+    </div>
+  `).join('');
+
+      // Generate HTML for mobile row 2
+      const mobileRow2HTML = secondRowVideos.map(item => `
+    <div class="portfolio-item group relative overflow-hidden rounded-lg cursor-pointer flex-shrink-0 w-[280px]"
+      data-video="${item.video}">
+      <div class="aspect-video bg-gray-800 relative overflow-hidden">
+        <img src="${item.thumbnail}" alt="${item.title}"
+          class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110">
+        <div
+          class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center transition-all duration-300 group-hover:bg-opacity-20">
+          <div
+            class="play-button w-16 h-16 rounded-full bg-[#ebd496] flex items-center justify-center transform transition-all duration-300 group-hover:scale-110">
+            <i class="fas fa-play text-[#0b090a] ml-1"></i>
+          </div>
+        </div>
+        <div class="loading-spinner absolute inset-0 hidden items-center justify-center">
+          <div class="animate-spin rounded-full h-12 w-12 border-b-2 border-[#ebd496]"></div>
+        </div>
+      </div>
+      <div class="mt-4">
+        <h4 class="gold-text text-lg font-semibold">${item.title}</h4>
+        <p class="light-text text-sm mt-1">${item.description}</p>
+      </div>
+    </div>
+  `).join('');
+
+      // Populate all containers
+      portfolioGrid.innerHTML = desktopItemHTML;
+      portfolioGridMobileRow1.innerHTML = mobileRow1HTML;
+      portfolioGridMobileRow2.innerHTML = mobileRow2HTML;
+    }
+
+
+
+    // Initialize portfolio on DOM load
+    document.addEventListener('DOMContentLoaded', () => {
+      generatePortfolioItems();
+
+      // Initialize clients carousel
+      if (document.getElementById('clients')) {
+        initClientsCarousel();
+      }
+
+      // Re-initialize portfolio items after generating them
+      // const newPortfolioItems = document.querySelectorAll('.portfolio-item');
+
+      // Add event listeners to new portfolio items
+      // newPortfolioItems.forEach(item => {
+      //   item.addEventListener('click', () => {
+      //     const videoSrc = item.getAttribute('data-video');
+      //     const title = item.querySelector('h4').textContent;
+      //     const description = item.querySelector('p').textContent;
+
+      //     openVideoModal(videoSrc, title, description);
+      //   });
+      // });
+
+      // Re-initialize portfolio items after generating them - UPDATED FOR ALL CONTAINERS
+      function initializePortfolioEventListeners() {
+        const allPortfolioItems = document.querySelectorAll('.portfolio-item');
+
+        // Add event listeners to ALL portfolio items (mobile + both desktop rows)
+        allPortfolioItems.forEach(item => {
+          item.addEventListener('click', () => {
+            const videoSrc = item.getAttribute('data-video');
+            const title = item.querySelector('h4').textContent;
+            const description = item.querySelector('p').textContent;
+
+            openVideoModal(videoSrc, title, description);
+          });
+        });
+      }
+
+      // Call this function after generating portfolio items
+      initializePortfolioEventListeners();
+
+      // Rest of your existing DOMContentLoaded code...
+      gsap.registerPlugin(ScrollTrigger);
+
+      const introTL = gsap.timeline({ defaults: { ease: 'power3.out', duration: 1 } });
+
+      gsap.set(siteNav, { yPercent: 0 });
+
+      introTL
+        .from('.hero-title span', {
+          y: 100,
+          opacity: 0,
+          stagger: 0.1,
+          duration: 0.5,
+          ease: 'power2.inOut'
+        }, "-=0.5")
+        .from('.hero-tagline', {
+          yPercent: 100,
+          opacity: 0,
+          duration: 0.8
+        }, "-=0.6")
+        .fromTo(arrowDown, { opacity: 0 }, { opacity: 1, duration: 0.1 })
+        .to(arrowDown, {
+          y: -20,
+          duration: 0.8,
+          repeat: -1,
+          yoyo: true,
+          ease: "power1.inOut",
+        });
+
+      gsap.timeline({
+        scrollTrigger: {
+          trigger: '#home',
+          start: 'top top',
+          end: 'bottom top',
+          scrub: 0.3,
+          pinSpacing: false,
+        }
+      })
+        .to('.hero-content', {
+          y: 200,
+          scale: 1.5,
+          opacity: 0,
+          ease: "power2.inOut",
+        });
+
+      const counters = document.querySelectorAll('.counter-value');
+
+      ScrollTrigger.create({
+        trigger: "#about",
+        start: "top 70%",
+        onEnter: () => animateCounters(),
+        once: true
+      });
+
+      function animateCounters() {
+        counters.forEach(counter => {
+          const target = parseInt(counter.getAttribute('data-target'));
+          const duration = 3;
+
+          gsap.to(counter, {
+            innerText: target,
+            duration: duration,
+            snap: { innerText: 1 },
+            stagger: 1,
+            ease: "power1.out",
+            onUpdate: function () {
+              if (Math.round(this.targets()[0].innerText) === target) {
+                counter.innerText = target + '+';
+              }
+            }
+          });
+        });
+      }
+    });
+
+
+
+
+    // Rest of your existing JavaScript functions remain the same...
+    // Track modal state
+    let isModalOpen = false;
+
+    // Portfolio functionality
+    function openVideoModal(videoSrc, title, description) {
+      if (isModalOpen) return;
+
+      isModalOpen = true;
+
+      // Reset video completely
+      modalVideo.pause();
+      modalVideo.currentTime = 0;
+      modalVideo.src = videoSrc;
+      modalVideo.preload = 'metadata';
+
+      // Set video info
+      videoTitle.textContent = title;
+      videoDescription.textContent = description;
+
+      // Show modal
+      videoModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+
+      // Load video
+      modalVideo.load();
+
+      // Try to play
+      modalVideo.play().catch(e => {
+        console.log('Autoplay prevented - user can manually play');
+      });
+    }
+
+    function closeVideoModal() {
+      if (!isModalOpen) return;
+
+      isModalOpen = false;
+
+      // Pause and reset video
+      modalVideo.pause();
+      modalVideo.currentTime = 0;
+      modalVideo.src = '';
+
+      // Hide modal
+      videoModal.classList.add('hidden');
+      document.body.style.overflow = 'auto';
+    }
+
+    // Close modal events
+    closeModal.addEventListener('click', closeVideoModal);
+
+    videoModal.addEventListener('click', (e) => {
+      if (e.target === videoModal) {
+        closeVideoModal();
+      }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && isModalOpen) {
+        closeVideoModal();
+      }
+    });
+
+    // Rest of your existing menu and contact button code...
+    gsap.set(mobileMenu, { height: 0, opacity: 0, pointerEvents: "none" });
+    const masterTL = gsap.timeline({ paused: true, defaults: { ease: "power3.inOut" } });
+
+    masterTL
+      .to(burgerLines[0], { y: 7.5, rotate: 45, duration: 0.20 }, 0)
+      .to(burgerLines[1], { opacity: 0, duration: 0.15 }, 0)
+      .to(burgerLines[2], { y: -7.5, rotate: -45, duration: 0.20 }, 0)
+      .to(mobileMenu, { height: "auto", opacity: 1, pointerEvents: "auto", duration: 0.3 }, 0)
+      .fromTo(".mobile-link",
+        { y: -20, opacity: 0, scale: 0.9 },
+        {
+          y: 0,
+          opacity: 1,
+          scale: 1,
+          duration: 0.2,
+          stagger: 0.06,
+          ease: "back.out(1.7)",
+        }, 0.1);
+
+    let open = false;
+
+    function toggleMenu() {
+      open = !open;
+      menuBtn.setAttribute('aria-expanded', String(open));
+      if (open) {
+        masterTL.play();
+      } else {
+        masterTL.reverse();
+      }
+    }
+
+    const contactBtn = document.querySelector('.gsap-contact-btn');
+    if (contactBtn) {
+      contactBtn.addEventListener('mouseenter', () => {
+        gsap.to(contactBtn, { scale: 1.05, duration: 0.3, ease: 'power2.out' });
+      });
+      contactBtn.addEventListener('mouseleave', () => {
+        gsap.to(contactBtn, { scale: 1, duration: 0.3, ease: 'power2.in' });
+      });
+    }
+
+    menuBtn.addEventListener('click', toggleMenu);
+    mobileLinks.forEach(link => link.addEventListener('click', () => {
+      if (open) toggleMenu();
+    }));
+
+
+
+
+
+    // Contact Form Functionality
+    // Contact Form Functionality - FORMSPREE VERSION
+    const contactForm = document.getElementById('contact-form');
+    const submitBtn = document.getElementById('submit-btn');
+    const loadingSpinner = document.getElementById('loading-spinner');
+    const successMessage = document.getElementById('success-message');
+    const errorMessage = document.getElementById('error-message');
+    const emailError = document.getElementById('email-error');
+
+    // Email validation
+    function validateEmail(email) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(email);
+    }
+
+    // Real-time email validation
+    document.getElementById('email').addEventListener('blur', function () {
+      if (this.value && !validateEmail(this.value)) {
+        emailError.classList.remove('hidden');
+        this.classList.add('border-red-400');
+      } else {
+        emailError.classList.add('hidden');
+        this.classList.remove('border-red-400');
+      }
+    });
+
+    // Form submission - FORMSPREE AJAX VERSION
+    contactForm.addEventListener('submit', async function (e) {
+      e.preventDefault(); // Now we can prevent because we use AJAX
+
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Validate email
+      if (!validateEmail(email)) {
+        emailError.classList.remove('hidden');
+        document.getElementById('email').classList.add('border-red-400');
+        return;
+      }
+
+      // Show loading state
+      submitBtn.disabled = true;
+      loadingSpinner.classList.remove('hidden');
+      successMessage.classList.add('hidden');
+      errorMessage.classList.add('hidden');
+      submitBtn.classList.add('bounce-effect');
+
+      try {
+        // Submit to Formspree via AJAX
+        const response = await fetch(contactForm.action, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            'Accept': 'application/json'
+          },
+          body: JSON.stringify({
+            email: email,
+            message: message,
+            _subject: 'Someone contacted from FOVA website!'
+          })
+        });
+
+        if (response.ok) {
+          // Success!
+          successMessage.classList.remove('hidden');
+          contactForm.reset();
+
+          // Hide success message after 5 seconds
+          setTimeout(() => {
+            successMessage.classList.add('hidden');
+          }, 5000);
+        } else {
+          throw new Error('Form submission failed');
+        }
+      } catch (error) {
+        // Error
+        errorMessage.classList.remove('hidden');
+      } finally {
+        // Reset loading state
+        submitBtn.disabled = false;
+        loadingSpinner.classList.add('hidden');
+        submitBtn.classList.remove('bounce-effect');
+      }
+    });
+
+
+
+
+
+
+
+    // Clients data array - ADD YOUR CLIENTS HERE!
+    const clientsData = [
+      {
+        logo: "./assets/clients/example-logo.png",
+        brand: "Luxury Motors",
+        comment: "Exceptional cinematic quality that elevated our brand presence."
+      },
+      {
+        logo: "./assets/clients/example-logo.png",
+        brand: "Elite Watches",
+        comment: "FOVA's attention to detail transformed our product storytelling."
+      },
+      {
+        logo: "./assets/clients/example-logo.png",
+        brand: "Premium Apparel",
+        comment: "Their visual storytelling captured our brand essence perfectly."
+      },
+      {
+        logo: "./assets/clients/example-logo.png",
+        brand: "Tech Innovations",
+        comment: "Professional, creative, and delivered beyond expectations."
+      },
+      {
+        logo: "./assets/clients/example-logo.png",
+        brand: "Lifestyle Brands",
+        comment: "The FOVA team understands premium visual aesthetics."
+      },
+      {
+        logo: "./assets/clients/example-logo.png",
+        brand: "Auto Excellence",
+        comment: "Cinematic quality that makes our products shine."
+      }
+    ];
+
+    // Function to generate client cards
+    function generateClientCards() {
+      const carousel = document.getElementById('clients-carousel');
+
+      // Create two sets for seamless infinite loop
+      const clientsHTML = clientsData.map(client => `
+        <div class="client-card flex-shrink-0 w-80 bg-slate-800/30 backdrop-blur-lg rounded-2xl p-6 border border-purple-500/20 shadow-xl hover:border-purple-400/40 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-purple-500/10">
+          <!-- Client Logo -->
+          <div class="flex justify-center mb-6">
+            <img src="${client.logo}" alt="${client.brand}" class="h-16 w-auto object-contain opacity-90">
+          </div>
+          
+          <!-- Brand Name -->
+          <h4 class="text-white text-xl font-semibold text-center mb-4">${client.brand}</h4>
+          
+          <!-- Client Comment -->
+          <p class="text-purple-200 text-sm text-center leading-relaxed italic">
+            "${client.comment}"
+          </p>
+        </div>
+      `).join('');
+
+      // Duplicate content for seamless loop
+      carousel.innerHTML = clientsHTML + clientsHTML;
+    }
+
+    // Initialize clients carousel - TIMELINE PING PONG
+    function initClientsCarousel() {
+      generateClientCards();
+
+      const carousel = document.getElementById('clients-carousel');
+      const cards = document.querySelectorAll('.client-card');
+      const cardWidth = cards[0].offsetWidth + 32;
+      const totalWidth = cardWidth * clientsData.length;
+
+      // Create ping pong timeline
+      const tl = gsap.timeline({ repeat: -1 });
+
+      // Right to left
+      tl.to(carousel, {
+        x: -totalWidth,
+        duration: 15,
+        ease: "none"
+      })
+        // Left to right (back to start)
+        .to(carousel, {
+          x: 0,
+          duration: 15,
+          ease: "none"
+        });
+    }
+  </script>
+
+
+</body>
+
+</html>
