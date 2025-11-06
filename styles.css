@@ -68,17 +68,17 @@ html {
 }
 
 /* Fallback for very old browsers */
-@supports not (background: linear-gradient(45deg, red, blue)) {
+/* @supports not (background: linear-gradient(45deg, red, blue)) {
   .contact-btn::before {
     background: #ebd496;
     animation: simpleRotate 3s linear infinite;
   }
-}
+} */
 
-@keyframes simpleRotate {
+/* @keyframes simpleRotate {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
-}
+} */
 
 
 .gold-bg {
