@@ -1,0 +1,480 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html,
+body {
+  overflow-x: hidden;
+  max-width: 100%;
+}
+
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0b090a;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #4a4a4a;
+  border-radius: 10px;
+  border: 2px solid #0b090a;
+}
+
+.navbar-font {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+html {
+  scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: #4a4a4a #0b090a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #000000 0%, #131313 45%, #292364 60%, #1a1549 100%);
+  background-size: 200% 200%;
+  animation: fluidDiagonal 7s ease-in-out infinite;
+  color: white;
+  width: 100%;
+  overflow: hidden;
+}
+
+
+
+.portfolio-bg {
+  /* background-color: #080808; */
+}
+
+@keyframes fluidDiagonal {
+  0% {
+    background-position: 45% 40%;
+  }
+
+  50% {
+    background-position: 55% 50%;
+  }
+
+  100% {
+    background-position: 45% 40%;
+  }
+}
+
+
+.gold-bg {
+  background-color: #ebebeb;
+}
+
+.hero-title span {
+  display: inline-block;
+}
+
+.mask-container {
+  overflow: hidden;
+}
+
+.hero-content h1,
+.hero-content p {
+  text-shadow: 0px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.logo {
+  width: 120px;
+}
+
+.glass-effect {
+  backdrop-filter: blur(4px);
+}
+
+.gold-underline {
+  background-color: #e7e7e7;
+}
+
+.light-text {
+  color: #b3b3b3
+}
+
+.gold-text {
+  color: #e7e7e7 !important;
+}
+
+.cstm-dark {
+  background-color: #0b090a;
+}
+
+.connect-btn {
+  position: relative;
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+.contact-btn::after,
+.contact-btn::before {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  inset: -1.5px;
+  border-radius: 30px;
+  background-image: conic-gradient(from var(--angle), transparent 10%, rgb(255, 156, 149), rgb(144, 146, 255), rgb(154, 255, 154), rgb(255, 156, 149));
+  animation: 3.5s spin linear infinite;
+}
+
+.contact-btn::before {
+  filter: blur(5px);
+  opacity: 0.25;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+
+  to {
+    --angle: 360deg;
+  }
+}
+
+.dark-opacity {
+  background-color: rgba(0, 0, 0, 0.2)
+}
+
+.dark-text {
+  color: #0b090a;
+}
+
+.glass {
+  background-color: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(10px);
+}
+
+#site-nav {
+  z-index: 1000 !important;
+}
+
+/* Portfolio Styles - FIXED */
+.portfolio-item {
+  transition: all 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+}
+
+.play-button {
+  box-shadow: 0 4px 15px rgba(235, 212, 150, 0.3);
+}
+
+/* Use specific class for portfolio gold background to avoid conflicts */
+.portfolio-gold-bg {
+  background-color: #ebd496;
+}
+
+/* Smooth transitions for modal */
+#video-modal {
+  backdrop-filter: blur(10px);
+}
+
+/* Ensure video responsiveness */
+#modal-video {
+  background: #000;
+}
+
+/* Loading animation - fixed duplicate keyframe */
+@keyframes loading-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* Simple Modal Transitions */
+#video-modal {
+  backdrop-filter: blur(10px);
+  transition: opacity 0.3s ease;
+}
+
+#video-modal:not(.hidden) {
+  opacity: 1;
+}
+
+#video-modal.hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+/*Styles for Contact us*/
+
+/* Contact Section Styles */
+.bg-wave-pattern {
+  background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.3), transparent);
+  animation: wave 8s ease-in-out infinite;
+}
+
+@keyframes wave {
+
+  0%,
+  100% {
+    transform: translateX(-100%);
+  }
+
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes float {
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* Form Input Glow Effect */
+input:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}
+
+/* Bounce animation for submit button */
+@keyframes bounce {
+
+  0%,
+  20%,
+  53%,
+  80%,
+  100% {
+    transform: scale(1);
+  }
+
+  40%,
+  43% {
+    transform: scale(1.1);
+  }
+
+  70% {
+    transform: scale(1.05);
+  }
+}
+
+.bounce-effect {
+  animation: bounce 1s ease infinite;
+}
+
+
+
+/* styleing for clients*/
+
+/* Clients Section Styles */
+.client-card {
+  backdrop-filter: blur(16px);
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.client-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+  transition: left 0.6s ease;
+}
+
+.client-card:hover::before {
+  left: 100%;
+}
+
+.client-card:hover {
+  transform: translateY(-8px) scale(1.05);
+  border-color: rgba(255, 255, 255, 0.4);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.1),
+    0 0 0 1px rgba(255, 255, 255, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .client-card {
+    width: 280px !important;
+    /* Force specific width for mobile */
+    margin: 0 8px;
+  }
+
+  #clients-carousel {
+    padding: 0 16px;
+  }
+}
+
+
+
+
+
+/*Services styles*/
+
+/* Services Section Styles */
+#services {
+  background: linear-gradient(135deg, #000000 0%, #131313 45%, #292364 60%, #1a1549 100%);
+  background-size: 200% 200%;
+  animation: fluidDiagonal 7s ease-in-out infinite;
+}
+
+.services-text-container {
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+.services-text-container::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  height: 90%;
+  background: radial-gradient(circle at center,
+      rgba(235, 212, 150, 0.1) 0%,
+      transparent 70%);
+  opacity: 0.3;
+  border-radius: inherit;
+  z-index: -1;
+}
+
+.service-item {
+  transition: transform 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateX(5px);
+}
+
+.service-icon {
+  transition: all 0.3s ease;
+}
+
+.service-item:hover .service-icon {
+  background: rgba(235, 212, 150, 0.1);
+  border-color: rgba(235, 212, 150, 0.3);
+  transform: scale(1.05);
+}
+
+/* Mobile specific styles */
+@media (max-width: 1024px) {
+  .services-text-container {
+    background: linear-gradient(to bottom,
+        rgba(11, 9, 10, 0.9) 0%,
+        rgba(19, 19, 19, 0.85) 100%) !important;
+    backdrop-filter: blur(20px);
+  }
+}
+
+@media (max-width: 768px) {
+  #services {
+    padding: 80px 0;
+  }
+
+  .services-text-container {
+    padding: 2rem !important;
+    background: linear-gradient(to bottom,
+        rgba(11, 9, 10, 0.95) 0%,
+        rgba(19, 19, 19, 0.9) 100%) !important;
+  }
+}
+
+
+/* mobile portfolio styles */
+
+/* Portfolio Mobile Horizontal Scroll */
+.portfolio-grid-mobile {
+  scrollbar-width: thin;
+  scrollbar-color: #4a4a4a transparent;
+}
+
+.portfolio-grid-mobile::-webkit-scrollbar {
+  height: 6px;
+}
+
+.portfolio-grid-mobile::-webkit-scrollbar-track {
+  background: transparent;
+  border-radius: 10px;
+}
+
+.portfolio-grid-mobile::-webkit-scrollbar-thumb {
+  background-color: #4a4a4a;
+  border-radius: 10px;
+}
+
+/* Ensure mobile items don't shrink */
+.portfolio-item.flex-shrink-0 {
+  flex-shrink: 0;
+}
+
+/* Hide scrollbar on mobile but keep functionality */
+@media (max-width: 768px) {
+  .overflow-x-auto {
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .overflow-x-auto::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+/* Mobile horizontal scroll styles */
+@media (max-width: 768px) {
+  .portfolio-grid-mobile-row-1,
+  .portfolio-grid-mobile-row-2 {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+  
+  .portfolio-grid-mobile-row-1::-webkit-scrollbar,
+  .portfolio-grid-mobile-row-2::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .portfolio-item.flex-shrink-0 {
+    flex: 0 0 auto;
+  }
+}
