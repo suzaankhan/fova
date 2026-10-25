@@ -16,7 +16,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
 
 </head>
 
@@ -74,7 +74,8 @@
           <div class="flex items-center gap-3">
             <a href="#contact"
               class="hidden md:inline-flex gsap-contact-btn gold-text items-center rounded-3xl hover:text-blue-600 transition-colors">
-              <div class="simple-btn cstm-dark border border-white py-2 px-6 rounded-3xl hover:bg-white/5 transition-all duration-300">
+              <div
+                class="simple-btn cstm-dark border border-white py-2 px-6 rounded-3xl hover:bg-white/5 transition-all duration-300">
                 Let's Connect
               </div>
             </a>
@@ -103,7 +104,8 @@
         <a href="#services" class="gold-text mobile-link block px-3 py-2 rounded-lg tracking-widest">SERVICES</a>
         <!-- <a href="#clients" class="gold-text mobile-link block px-3 pt-2 pb-6 rounded-lg tracking-widest">CLIENTS</a> -->
         <a href="#contact" class="mobile-link mt-2 gold-text text-center rounded-xl">
-          <div class="simple-btn cstm-dark border border-white py-3 px-6 rounded-3xl hover:bg-white/5 transition-all duration-300">
+          <div
+            class="simple-btn cstm-dark border border-white py-3 px-6 rounded-3xl hover:bg-white/5 transition-all duration-300">
             Let's Connect
           </div>
         </a>
@@ -429,10 +431,21 @@
                 <i class="fas fa-phone text-[#ebd496] mr-3 group-hover:scale-110 transition-transform duration-300"></i>
                 Let's Talk
               </h4>
-              <a href="tel:+919967373341"
-                class="text-blue-200 text-lg underline hover:text-blue-300 transition-colors duration-300">
-                +91 9967373341
-              </a>
+              <div class="flex flex-col gap-2 ">
+
+                <a href="tel:+917977490870"
+                  class="text-blue-200 text-lg  hover:text-blue-300 transition-colors duration-300">
+                  <span class="text-blue-200 text-lg">Affan  </span><span class="underline">+91 7977490870</span>
+                </a>
+
+                <a href="tel:+919967373341"
+                  class="text-blue-200 text-lg  hover:text-blue-300 transition-colors duration-300">
+                  <span class="text-blue-200 text-lg">Shujat  </span><span class="underline">+91 9967373341</span>
+                </a>
+
+
+
+              </div>
             </div>
 
             <div class="group">
@@ -653,13 +666,6 @@
         description: "Paired Luxury Drive Cinematic",
         category: "automotive"
       },
-       {
-        video: "https://vz-5b0abe06-2c3.b-cdn.net/b5754507-f158-4fce-a6c9-f569e1076bb6/playlist.m3u8",
-        thumbnail: "./assets/fova-assets/thumbnails/Defender Modi Motors Thumbnail.PNG",
-        title: "LandRover - Defender",
-        description: "Build for the extraordinary",
-        category: "automotive"
-      },
       {
         video: "https://res.cloudinary.com/dagfw2mw8/video/upload/v1762356194/aromyra_fuoavv.mp4",
         thumbnail: "./assets/fova-assets/thumbnails/aromyra-tn.PNG",
@@ -779,7 +785,7 @@
         description: "Leading intralogistics and supply chain trade exhibition.",
         category: "events"
       },
-       {
+      {
         video: "https://33ub7k2ccn.ucarecd.net/8f9a5208-0a49-466b-9e64-b5b57dd1456d/JMAIIEGeometryCNCReel.mp4",
         thumbnail: "./assets/fova-assets/thumbnails/() JMAIIE Geometry CNC Reel Thumb.PNG",
         title: "JMAIIE Geometry CNC",
@@ -799,13 +805,13 @@
 
     function generateFilterButtons() {
       const filterContainer = document.getElementById('filter-container');
-      
+
       const buttonsHTML = categories.map(category => {
         const isActive = category.id === 'all' ? 'active' : '';
         const textColor = category.id === 'all' ? 'text-[#0b090a]' : 'gold-text';
         const bgColor = category.id === 'all' ? 'bg-[#ebd496]' : '';
         const borderColor = category.id === 'all' ? 'border-[#ebd496]' : 'border-[#8a8a8a]';
-        
+
         return `
           <button class="filter-btn ${isActive} ${textColor} ${bgColor} ${borderColor} 
                   px-5 py-2 md:px-6 md:py-2.5  hover:bg-white/5 hover:translate-y-1
@@ -815,9 +821,9 @@
           </button>
         `;
       }).join('');
-      
+
       filterContainer.innerHTML = buttonsHTML;
-      
+
       // Setup event listeners for the generated buttons
       setupFilterButtons();
     }
@@ -825,45 +831,45 @@
     // Function to setup filter button click events
     function setupFilterButtons() {
       const filterButtons = document.querySelectorAll('.filter-btn');
-      
+
       filterButtons.forEach(button => {
-        button.addEventListener('click', function() {
+        button.addEventListener('click', function () {
           const filter = this.getAttribute('data-filter');
-          
+
           // Don't do anything if already active
           if (filter === currentFilter) return;
-          
+
           // Update current filter
           currentFilter = filter;
-          
+
           // Update active state
           filterButtons.forEach(btn => {
             const btnFilter = btn.getAttribute('data-filter');
             const isActive = btnFilter === filter;
-            
+
             btn.classList.toggle('active', isActive);
             btn.classList.toggle('text-[#0b090a]', isActive);
             btn.classList.toggle('gold-text', !isActive);
             btn.classList.toggle('bg-[#ebd496]', isActive);
             btn.classList.toggle('border-[#ebd496]', isActive);
             btn.classList.toggle('border-[#8a8a8a]', !isActive);
-            
+
             if (isActive) {
               btn.style.backgroundColor = '#ebd496';
             } else {
               btn.style.backgroundColor = '';
             }
           });
-          
+
           // Add loading state
           const portfolioContainer = document.getElementById('portfolio');
           portfolioContainer.classList.add('filter-loading');
-          
+
           // Small delay for smooth transition
           setTimeout(() => {
             generatePortfolioItems(filter);
             portfolioContainer.classList.remove('filter-loading');
-            
+
             // Smooth scroll to top on mobile
             if (window.innerWidth < 768 && filter !== 'all') {
               const portfolioSection = document.getElementById('portfolio');
@@ -901,11 +907,11 @@
             <p class="light-text">We don't have any ${filter} videos yet. Check back soon!</p>
           </div>
         `;
-        
+
         portfolioGrid.innerHTML = noResultsHTML;
         portfolioGridMobileRow1.innerHTML = '';
         portfolioGridMobileRow2.innerHTML = '';
-        
+
         // Re-initialize event listeners
         initializePortfolioEventListeners();
         return;
@@ -997,7 +1003,7 @@
       portfolioGrid.innerHTML = desktopItemHTML;
       portfolioGridMobileRow1.innerHTML = mobileRow1HTML;
       portfolioGridMobileRow2.innerHTML = mobileRow2HTML;
-      
+
       // Re-initialize event listeners for the new items
       initializePortfolioEventListeners();
     }
@@ -1112,43 +1118,103 @@
     // Portfolio functionality
     function openVideoModal(videoSrc, title, description) {
       if (isModalOpen) return;
-
       isModalOpen = true;
 
-      // Reset video completely
-      modalVideo.pause();
-      modalVideo.currentTime = 0;
-      modalVideo.src = videoSrc;
-      modalVideo.preload = 'metadata';
-
-      // Set video info
-      videoTitle.textContent = title;
-      videoDescription.textContent = description;
-
-      // Show modal
-      videoModal.classList.remove('hidden');
-      document.body.style.overflow = 'hidden';
-
-      // Load video
-      modalVideo.load();
-
-      // Try to play
-      modalVideo.play().catch(e => {
-        console.log('Autoplay prevented - user can manually play');
-      });
-    }
-
-    function closeVideoModal() {
-      if (!isModalOpen) return;
-
-      isModalOpen = false;
-
-      // Pause and reset video
+      // Reset video element
       modalVideo.pause();
       modalVideo.currentTime = 0;
       modalVideo.src = '';
 
-      // Hide modal
+      // Destroy any previous HLS instance
+      if (window.hlsInstance) {
+        window.hlsInstance.destroy();
+        window.hlsInstance = null;
+      }
+
+      videoTitle.textContent = title;
+      videoDescription.textContent = description;
+
+      videoModal.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+
+      // Check if the URL is an HLS stream (ends with .m3u8)
+      const isHLS = videoSrc.includes('.m3u8');
+
+      if (isHLS && Hls.isSupported()) {
+        const hls = new Hls();
+        window.hlsInstance = hls;
+        hls.loadSource(videoSrc);
+        hls.attachMedia(modalVideo);
+        hls.on(Hls.Events.MANIFEST_PARSED, () => {
+          modalVideo.play().catch(e => console.log('Playback error:', e));
+        });
+        hls.on(Hls.Events.ERROR, (event, data) => {
+          console.error('HLS error:', data);
+        });
+      } else {
+        // Regular MP4 or other format – works exactly as before
+        modalVideo.src = videoSrc;
+        modalVideo.load();
+        modalVideo.play().catch(e => console.log('Playback error:', e));
+      }
+    }
+    // function openVideoModal(videoSrc, title, description) {
+    //   if (isModalOpen) return;
+
+    //   isModalOpen = true;
+
+    //   // Reset video completely
+    //   modalVideo.pause();
+    //   modalVideo.currentTime = 0;
+    //   modalVideo.src = videoSrc;
+    //   modalVideo.preload = 'metadata';
+
+    //   // Set video info
+    //   videoTitle.textContent = title;
+    //   videoDescription.textContent = description;
+
+    //   // Show modal
+    //   videoModal.classList.remove('hidden');
+    //   document.body.style.overflow = 'hidden';
+
+    //   // Load video
+    //   modalVideo.load();
+
+    //   // Try to play
+    //   modalVideo.play().catch(e => {
+    //     console.log('Autoplay prevented - user can manually play');
+    //   });
+    // }
+
+    // function closeVideoModal() {
+    //   if (!isModalOpen) return;
+
+    //   isModalOpen = false;
+
+    //   // Pause and reset video
+    //   modalVideo.pause();
+    //   modalVideo.currentTime = 0;
+    //   modalVideo.src = '';
+
+    //   // Hide modal
+    //   videoModal.classList.add('hidden');
+    //   document.body.style.overflow = 'auto';
+    // }
+
+    function closeVideoModal() {
+      if (!isModalOpen) return;
+      isModalOpen = false;
+
+      // Destroy HLS instance if it exists
+      if (window.hlsInstance) {
+        window.hlsInstance.destroy();
+        window.hlsInstance = null;
+      }
+
+      modalVideo.pause();
+      modalVideo.currentTime = 0;
+      modalVideo.src = '';
+
       videoModal.classList.add('hidden');
       document.body.style.overflow = 'auto';
     }
